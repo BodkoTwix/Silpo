@@ -6,11 +6,21 @@ body{
     background-color: #9D4EDD;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header{
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 10px 30px;
     align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #9D4EDD;
 }
 
 nav {
@@ -34,13 +44,14 @@ nav a{
 }
 
 .banner{
+    
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-image: url(img/Group\ 3.png);
-    background-position: center;
+    background-position: 0 30px;
     background-size: cover;
     color: #fff;
     font-weight: 700;
@@ -69,6 +80,7 @@ nav a{
     display: flex;
     align-items: center;
     cursor: pointer;
+    left: -40px;
 }
 
 .stepan{
@@ -89,21 +101,30 @@ nav a{
 .products{
     
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
     flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
     width: 100%;
 }
 
 .product{
+    border-radius: 7%;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0);
     width: 20%;
     background-color: white;
     display: flex;
     flex-direction: column;
+    padding: 1%;
     justify-content: center;
     align-items: center;
     min-height: 325px;
+    transition: 0.3s all ease;
+}
+
+
+.product:hover{
+    box-shadow: inset 0px 0px 10px #000;
+    transform: scale(0.98);
 }
 
 .product_img{
@@ -197,4 +218,64 @@ nav a{
     color: #FF8522;
     font-size: 40px;
     font-weight: bold;
+}
+
+.footer_title{
+    font-size: 48px;
+    text-align: center;
+    margin-top: 0;
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    color: #ffffff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #3C096C;
+}
+.footer_sponsors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.footer_div img{
+    width: 100%;
+}
+.footer_div {
+width: 20%;
+
+}
+
+#mikita{
+max-width: 60%;
+}
+
+#lisi{
+    height: 50%;
+}
+
+.baton{
+    background-color: #9D4EDD;
+    color: rgb(255, 255, 255);
+    border-radius: 50% 20% / 10% 40%;
+    font-size: 30px;
+    padding: 10px 20px;
+    font-family: 'Amatic SC';
+    font-weight: 800;
+    transition: 0.3s all ease;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+
+.baton:hover{
+    background-color:   #3C096C;
+    transform: scale(1.1);
+}
+
+.link{
+
+    text-decoration: none;
+}
+
+.button{
+    text-decoration: none;
 }
